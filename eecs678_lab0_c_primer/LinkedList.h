@@ -88,14 +88,14 @@ static struct Node* insertAtEnd(struct Node* head, int data)
     // Step 1: Create a new node using 'createNode'. Handle NULL case if 'malloc' fails in 'createNode'.
     // Hint: Use the function 'createNode(int)' to allocate and initialize the new node.
     // Your Code Here
-    struct Node* nodeToInsert = createNode(10);
+    struct Node* nodeToInsert = createNode(data);
     // Step 2: Check if the list is empty.
     // Hint: If head is NULL, assign the new node to head.
     // Your Code Here
 
     struct Node* temp = head;
     if(temp == NULL) {
-        head = nodeToInsert;
+        return nodeToInsert;
     }
 
     // Step 3: If the list is not empty, traverse to the last node.
@@ -129,6 +129,7 @@ static void printList(struct Node* head)
     // Your Code Here
     if (head == NULL) {
         printf("The list is empty");
+        return;
     }
 
 
@@ -141,7 +142,7 @@ static void printList(struct Node* head)
     // Step 3: Print the data of each node.
     // Hint: Access the data of the node using the arrow operator (->).
     // Your Code Here
-        printf(temp->data);
+        printf("Data: %d", temp->data);
     // Step 4: Move to the next node.
     // Hint: Update the current node pointer to the next node in the list.
     // Your Code Here
@@ -171,8 +172,8 @@ static void deleteList(struct Node** head)
     // Step 1: Declare a pointer to hold the current node and a temporary node.
     // Hint: Use two pointers, one for the current node and another to hold the next node temporarily.
     // Your Code Here
-    struct Node* temp = head;
-    struct Node* current = head;
+    struct Node* temp = *head;
+    struct Node* current = *head;
 
     
     // Step 2: Traverse the list and free each node.
@@ -186,7 +187,7 @@ static void deleteList(struct Node** head)
     // Step 3: After all nodes are freed, set the head to NULL to indicate the list is empty.
     // Hint: It is crucial to reset the head pointer to NULL after freeing the nodes to avoid dangling pointers.
     // Your Code Here
-    head = NULL;
+    *head = NULL;
 }
 
 
