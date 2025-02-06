@@ -72,19 +72,7 @@ static struct Node* mergeLists(struct Node* list1, struct Node* list2)
 		return list1;
 	}
 	struct Node* head;
-	struct Node* merger;
 	struct Node* tail = NULL;
-	if (list1->data < list2->data) {
-		head = list1;
-		merger = list2;
-	}
-	else {
-		head = list2;
-		merger = list1;
-	}
-
-    struct Node* temp = NULL;  
-	struct Node* temp2 = NULL;
  
 	//We always want the head to be the smaller valued list
 	//And we don't want to lose the pointer to the head.
