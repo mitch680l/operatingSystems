@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     signals
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _catch_int, symObjAddr: 0x0, symBinAddr: 0x100003C14, symSize: 0x128 }
+  - { offset: 0x3F, size: 0x8, addend: 0x0, symName: _ctrl_c_count, symObjAddr: 0x1148, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x5B, size: 0x8, addend: 0x0, symName: _got_response, symObjAddr: 0x114C, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offset: 0x9A, size: 0x8, addend: 0x0, symName: _catch_int, symObjAddr: 0x0, symBinAddr: 0x100003C14, symSize: 0x128 }
+  - { offset: 0xDA, size: 0x8, addend: 0x0, symName: _catch_tstp, symObjAddr: 0x128, symBinAddr: 0x100003D3C, symSize: 0x4C }
+  - { offset: 0xFE, size: 0x8, addend: 0x0, symName: _catch_alarm, symObjAddr: 0x174, symBinAddr: 0x100003D88, symSize: 0x34 }
+  - { offset: 0x13A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1A8, symBinAddr: 0x100003DBC, symSize: 0xF4 }
+...
